@@ -1,16 +1,45 @@
-# React + Vite
+# App de Clima — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido! Esta es una aplicación de clima interactiva y responsiva creada con React y Vite.
 
-Currently, two official plugins are available:
+Hecho por Marcos — una pequeña app para consultar el clima actual y datos útiles por ciudad.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Características principales
+- Búsqueda de ciudades por nombre
+- Clima actual: temperatura, descripción, humedad y viento
+- Iconos dinámicos según las condiciones del tiempo
 
-## React Compiler
+Tecnologías
+- React (Vite)
+- HTML, CSS
+- Posible integración con APIs públicas de clima (por ejemplo: OpenWeatherMap)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+Cómo ejecutar
 
-## Expanding the ESLint configuration
+1. Instala dependencias
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+```
+
+2. Ejecuta en modo desarrollo (Vite)
+
+```bash
+npm run dev
+```
+
+3. Para producción
+
+```bash
+npm run build
+npm run preview
+```
+
+Notas
+- Si la aplicación usa una API externa para el clima (por ejemplo OpenWeatherMap), crea un archivo `.env` en la raíz con tu clave, por ejemplo:
+
+```text
+VITE_WEATHER_API_KEY=tu_api_key_aqui
+```
+
+- Diseño y estilos en `src/WeatherApp.css`.
