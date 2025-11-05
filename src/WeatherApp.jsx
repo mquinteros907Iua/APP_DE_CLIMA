@@ -3,62 +3,56 @@ import './WeatherApp.css'
 
 export const WeatherApp = () => {
 
-    const [city, setCity] = useState('')
-    const [weatherData, setWeatherData] = useState(null)
-
     const urlBase = 'https://api.openweathermap.org/data/2.5/weather'
-    const API_KEY = 'YOUR_API_KEY'
-    const difKelvin = 273.15 // Para lograr obtener grados Celsious debemos restar este número a los grados Kelvin
+    const API_KEY = '8ed6efcb6b682d0b55df8119d64fc3a8'
+    const difKelvin = 273.15 // Para convertir de Kelvin a Celsius
 
-    const fetchWeatherData = async () => {
-        try {
-            const response = await fetch(`${urlBase}?q=${city}&appid=${API_KEY}&lang=es`)
-            const data = await response.json()
-            console.log(data)
-            setWeatherData(data)
-        } catch (error) {
-            console.error('Ha habido un error: ', error)
-        }
-    }
+    const [ciudad, setCiudad] = useState('')
+    const [dataClima, setDataClima] = useState(null)
 
-
-    const handleCityChange = (event) => {
-        setCity(event.target.value)
+    const handleCambioCiudad = (event) => {
+        setCiudad(event.target.value)
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        fetchWeatherData()
+        if (ciudad.length > 0) {
+            fetchClima()
+        }
     }
 
-    return (
-        <div className="container">
-            <h1>Aplicación de Clima</h1>
-            <form onSubmit={handleSubmit}>
-                <input
-                    type="text"
-                    placeholder="Ingresa una ciudad"
-                    value={city}
-                    onChange={handleCityChange}
-                />
-                <button type="submit">Buscar</button>
-            </form>
+    const fetchClima = async () => {
+        try {
+            const response = await fetch(`${urlBase}?q=${ciudad}&appid=${API_KEY}&lang=es`)
+            const data = await response.json()
+            setDataClima(data)
+        } catch (error) {
+            console.error('Ocurrió un error: ', error)
+        }
+    }
 
-            {weatherData && (
-
-                <div>
-                    <h2>{weatherData.name}, {weatherData.sys.country}</h2>
-                    <p>La temperatura actual es {Math.floor(weatherData.main.temp - difKelvin)}ºC</p>
-                    <p>La condición meteorológica actual: {weatherData.weather[0].description}</p>
-                    <img
-                        src={`https://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`}
-                        alt={weatherData.weather[0].description}
-                    />
-                </div>
-
-
-            )}
-
-        </div>
-    )
-}
+  return (
+    <div className="container">
+      <h1>Aplicación de Clima</h1>
+      <form onSubmit={handleSubmit}>
+        <input 
+          type="text" 
+          placeholder="Ingresa una ciudad" 
+          value={ciudad}
+          onChange={handleCambioCiudad}
+        />
+        <button type="submit">Buscar</button>
+      </form>
+      {
+        dataClima && (
+          <div>
+            <h2>{dataClima.name} , {dataClima.sys.country}</h2>
+            <p>Temperatura Actual: {parseInt(dataClima?.main?.temp - difKelvin)}°C</p>
+            <p>Condición meteorológica: {dataClima.weather[0].description}</p>
+            <img src={`https://openweathermap.org/img/wn/${dataClima.weather[0].icon}@2x.png`} alt={dataClima.weather[0].description} />
+          </div>
+        )
+      }
+    </div>
+  );
+};

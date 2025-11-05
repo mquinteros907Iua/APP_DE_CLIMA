@@ -1,30 +1,16 @@
-# Aplicación de Clima
+# React + Vite
 
-Este repositorio contiene un proyecto en REACT JS de clima, donde se puede buscar por ciudad, parte del curso de REACT.JS dado por Sergie Code para Digital House.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Uso
+Currently, two official plugins are available:
 
-1.  Clone el repositorio haciendo `git clone https://github.com/digitalhouse-content/aplicacion-clima-react`
-2.  Abra el proyecto en su editor de código y en la terminal sobre la carpeta del proyecto ingrese `npm install`
-3.  Una vez finalizado podrá ejecutar el proyecto en formato desarrollo usando `npm run dev`
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Requiere:
+## React Compiler
 
--   **NODE.JS**: Debe tener instalado NodeJS
--   **GIT**: Debe tener Instalado GIT
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
-## Acerca del curso de React.JS
-En este curso aprenderás la tecnología frontend más buscada del mercado, la cual te permite realizar increíbles aplicaciones webs SPA
+## Expanding the ESLint configuration
 
-# Acerca de SERGIE CODE:
-#### ¡Hola! ¡Yo soy Sergie Code y soy Software Engineer! Soy tech lead de un team Frontend con el cual hacemos desarrollos especializados en empresas de Seguros. También me dedico a la divulgación de tecnología, programación e Inteligencia Artificial por redes sociales. Con mucho orgullo he podido dar clases en la Universidad y además en diversos cursos online acerca de desarrollo web
-
-Me pueden encontrar en: 
-
-[Canal de Youtube | Sergie Code](https://www.youtube.com/@SergieCode)
-
-[Github | Sergie Code](https://github.com/sergiecode)
-
-[LinkedIn | Sergie Code](https://www.linkedin.com/in/sergiecode/)
-
-[Instagram | Sergie Code](https://www.instagram.com/sergiecode)
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.

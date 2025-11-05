@@ -4,49 +4,45 @@
     padding: 20px;
 }
 
-
-h1 {
+h1{
     font-size: 40px;
     margin-bottom: 20px;
 }
 
-form {
+form{
     display: flex;
     margin-bottom: 20px;
 }
 
-input[type="text"] {
+input{
+    type: text;
     flex: 1;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-button {
+button{
     padding: 10px 20px;
-    background-color: rgb(40, 97, 163);
+    background-color: #1216ff84;
     color: white;
     border: none;
-    border: 4px;
+    border-radius: 4px;
     cursor: pointer;
     transition: 1s all ease;
 }
 
-button:hover {
-    background-color: rgb(83, 151, 230);
+button:hover{
+    background-color: #070bffff;
 }
 
-h2 {
+h2{
     font-size: 30px;
 }
 
-h1,h2{
-    color: white;
-}
-
-p {
-    margin-bottom: 5px;
-    color: white;
+p{
+    margin-bottom: 10px;
+    color: #636262ff;
 }
 
 img{
@@ -55,15 +51,16 @@ img{
     margin-top: 10px;
 }
 
-@media (max-width:900px){
-    .container{
+@media (max-width: 900px) {
+    .container {
         max-width: 80%;
     }
 
-    h1{
-        font-size: 35px;
+    h1 {
+        font-size: 30px;
     }
-    h2{
-        font-size: 25px;
+
+    h2 {
+        font-size: 20px;
     }
 }

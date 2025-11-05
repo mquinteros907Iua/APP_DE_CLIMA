@@ -1,11 +1,9 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import { WeatherApp } from './WeatherApp'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { WeatherApp } from './WeatherApp.jsx'
 import './style.css'
-
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <WeatherApp/>
-  </React.StrictMode>,
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <WeatherApp />
+  </StrictMode>
 )
