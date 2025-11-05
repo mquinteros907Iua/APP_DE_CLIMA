@@ -4,7 +4,7 @@ import './WeatherApp.css'
 export const WeatherApp = () => {
 
     const urlBase = 'https://api.openweathermap.org/data/2.5/weather'
-    const API_KEY = '8ed6efcb6b682d0b55df8119d64fc3a8'
+    const API_KEY = 'API_KEY'
     const difKelvin = 273.15 // Para convertir de Kelvin a Celsius
 
     const [ciudad, setCiudad] = useState('')
