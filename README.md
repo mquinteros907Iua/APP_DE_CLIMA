@@ -37,11 +37,8 @@ npm run build
 npm run preview
 ```
 
-Notas
-- Si la aplicación usa una API externa para el clima (por ejemplo OpenWeatherMap), crea un archivo `.env` en la raíz con tu clave, por ejemplo:
-
 ```text
-VITE_WEATHER_API_KEY=tu_api_key_aqui
+API_KEY=tu_api_key_aqui
 ```
 
 - Diseño y estilos en `src/WeatherApp.css`.
