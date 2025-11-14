@@ -1,6 +1,6 @@
 # App de Clima — React + Vite
 
-Demo en línea: [https://aplicacion-clima-react-dh-marcos.netlify.app/](https://aplicacion-peliculas-react-digital-ho.netlify.app/)
+Demo en línea: https://aplicacion-clima-react-dh-marcos.netlify.app/
 
 ¡Bienvenido! Esta es una aplicación de clima interactiva y responsiva creada con React y Vite.
 
@@ -37,8 +37,11 @@ npm run build
 npm run preview
 ```
 
+Notas
+- Si la aplicación usa una API externa para el clima (por ejemplo OpenWeatherMap), crea un archivo `.env` en la raíz con tu clave, por ejemplo:
+
 ```text
-API_KEY=tu_api_key_aqui
+VITE_WEATHER_API_KEY=tu_api_key_aqui
 ```
 
 - Diseño y estilos en `src/WeatherApp.css`.
